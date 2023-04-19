@@ -10,7 +10,7 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/upload-and-index">Aba dos fotógrafos</Link>
+              <Link to="/upload-and-index">Aba do fotógrafo</Link>
             </li>
             <li>
               <Link to="/search-faces">Aba do cliente</Link>
