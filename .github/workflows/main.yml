@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Yarn Install
-      run: yarn install
+      run: yarn 
     - name: Pruduction Build
       run: yarn build
     - name: Deploy to S3
-    - uses: jakejarvis/s3-sync-action@master
+      uses: jakejarvis/s3-sync-action@master
       with:
         args: --acl public-read --follow-symlinks --delete
       env:
