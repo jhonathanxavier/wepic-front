@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import UploadAndIndexFaces from './components/UploadAndIndexFaces';
+import SearchFaces from './components/SearchFaces';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/upload-and-index">Aba dos fotógrafos</Link>
+            </li>
+            <li>
+              <Link to="/search-faces">Aba do cliente</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Routes>
+          <Route path="/upload-and-index" element={<UploadAndIndexFaces />} />
+          <Route path="/search-faces" element={<SearchFaces />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
